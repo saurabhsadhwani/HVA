@@ -1,2 +1,5 @@
-# HVA
-Hindi Voice Assistant
+# User Interface
+
+Command to run UI
+
+npm run serve
