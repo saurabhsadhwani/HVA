@@ -63,7 +63,7 @@ export default {
 	var response = res['data'];
 	console.log(response);
 
-		for(var i = 0; i < response.length; i++){
+	for(var i = 0; i < response.length; i++){
 	var isImage = "image" in response[i]; 
 	console.log(isImage);
 	if(isImage){	

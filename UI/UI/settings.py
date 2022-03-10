@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+from os.path import join
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-TEMPLATE_LOCATION = '/root/PG-DAI/MainProject/UI/chatbot/templates/'
+TEMPLATE_LOCATION = join(BASE_DIR, 'chatbot', 'templates')
 
 # Application definition
 
