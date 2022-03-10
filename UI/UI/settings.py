@@ -29,7 +29,6 @@ ALLOWED_HOSTS = []
 
 TEMPLATE_LOCATION = '/root/PG-DAI/MainProject/UI/chatbot/templates/'
 
-
 # Application definition
 
 INSTALLED_APPS = [
