@@ -63,32 +63,10 @@ export default {
 	var response = res['data'];
 	console.log(response);
 
-	var convertImgToDataURLviaCanvas = function(url, callback) {
-		var img = new Image();
-		img.crossOrigin = 'Anonymous';
-		img.onload = function() {
-			var canvas = document.createElement('CANVAS');
-			var ctx = canvas.getContext('2d');
-			var dataURL;
-			canvas.height = this.height;
-			canvas.width = this.width;
-			ctx.drawImage(this, 0, 0);
-			dataURL = canvas.toDataURL();
-			callback(dataURL);
-			canvas = null;
-		};
-		img.src = url;
-	}
-
-
-
-	for(var i = 0; i < response.length; i++){
+		for(var i = 0; i < response.length; i++){
 	var isImage = "image" in response[i]; 
 	console.log(isImage);
 	if(isImage){	
-		convertImgToDataURLviaCanvas(response[i]['image'], function( base64_data ) {
-		console.log( base64_data );
-		} );
 
 		this.messages.push({
 		agent: "bot",
