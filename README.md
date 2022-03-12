@@ -1,5 +1,5 @@
-# User Interface
 
-Command to run UI
+README.md will be updated shortly.
 
-npm run serve
+Thank You,
+Team
