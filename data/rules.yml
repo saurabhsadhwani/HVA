@@ -1,0 +1,33 @@
+version: "3.0"
+
+rules:
+
+- rule: say hello to user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+
+- rule: say goodbye to user
+  steps:
+  - intent: goodbye
+  - action: action_diagnosis
+  - action: utter_goodbye
+
+
+- rule: when user provides symptoms confirmation
+  steps:
+  - intent: affirm
+  - action: utter_affirm
+
+
+- rule: when user denies symptoms confirmation
+  steps:
+  - intent: deny
+  - action: utter_alternative
+
+
+- rule: respond positively when the user says thank you
+  steps:
+  - intent: thanks
+  - action: utter_thanks
