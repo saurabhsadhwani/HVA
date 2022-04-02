@@ -8,7 +8,7 @@ from rasa.engine.storage.storage import ModelStorage
 from rasa.shared.nlu.training_data.message import Message
 from rasa.shared.nlu.training_data.training_data import TrainingData
 
-# pip install googletrans
+# pip install googletrans==4.0.0-rc1
 from googletrans import Translator
 
 # pip install git+https://github.com/siddharth17196/english-hindi-transliteration
