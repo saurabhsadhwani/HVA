@@ -1,0 +1,71 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - end
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - detect_symptom
+  - mood_sick
+
+slots:
+  symptom_list:
+    type: list
+    influence_conversation: true
+    mappings:
+    - type: custom
+
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_ask_symptom
+  - utter_alternative
+  - utter_ask
+  - action_handle_symptom
+  - action_diagnosis
+
+responses:
+  utter_greet:
+  - text: "Hey! How can I help you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a medical bot, developed in Rasa."
+
+  utter_ask_symptom:
+  - text: "Please enter the symptom you have"
+
+  utter_alternative:
+  - text: Can you tell us what other symptom you have?
+
+  utter_ask:
+  - text: Do you have this symptom?
+    buttons:
+    - title: yes
+      payload: /symptom
+    - title: no
+      payload: /all
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

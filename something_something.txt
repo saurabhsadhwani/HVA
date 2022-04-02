@@ -1,0 +1,50 @@
+https://chat-widget-docs.rasa.com/?path=/docs/rasa-chat-widget--widget
+
+
+Sample Expected Conversation Flow :
+
+Hi
+	Hey! How can I help you?
+I am feeling sick
+	Please enter the symptom you have
+I am itching
+
+
+
+नमस्ते
+नमस्कार
+
+	नमस्ते! मैं आपकी क्या मदद कर सकता हूँ?
+
+मैं बीमार महसूस कर रहा हूँ
+मैं बीमार हूँ
+मुझे बहुत अच्छा नहीं लग रहा है
+मुझे अच्छा नहीं लग रहा
+
+	कृपया अपने लक्षण दर्ज करें
+	हमें अपने लक्षण बताएं
+
+मुझे खुजली हो रही है
+खुजली
+खांसी
+
+
+बस इतना ही
+
+	diagnosis
+
+हां
+
+
+
+Tasks to do next :
+
+- output pure hindi
+- lemmatization
+- synonames for symptoms
+- intent for multiple symptoms
+- update action for above part
+- interactive learning for various paths
+
+- try for language choice button
+- if above not possible, add functionality to ask language at start of Conversation

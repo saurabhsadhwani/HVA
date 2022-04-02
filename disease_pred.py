@@ -14,13 +14,10 @@ class Diagnosis:
             self.classes = f1.readline().split(':')
     
         self.df_symp_freq = pd.read_csv('pred_files/Symptom_frequencies.csv', index_col=0)
-        
-
         print('diagnosis initiated')
     
     def predict(self, symps):
         print('in prediction')
-
         row_inp = np.zeros(len(self.unique_symptoms))
         for symptom in symps:
             idx = np.where(self.unique_symptoms == symptom.strip(' '))[0]

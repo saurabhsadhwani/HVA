@@ -1,0 +1,262 @@
+version: "3.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - greetings
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - yep
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - nope
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - extremly sad
+    - so saad
+    - so sad
+  
+- intent: mood_sick
+  examples: |
+    - I feel sick
+    - I am feeling sick
+    - I am sick
+    - aweful
+    - not good
+    - not very good
+    - I don't feel very well
+    - I'm not feeling well
+    - I feel not good
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: end
+  examples: |
+    - that's all
+    - Yeah, that's it
+    - thats it
+    - It's all folks
+    - I guess that's it
+    - I guess that's all
+    - Yep, I think it's all
+    - Done, nothing more
+    - Thank you
+
+- intent: detect_symptom
+  examples: |
+    - I am having [chills](symptom)
+    - I have [acidity](symptom)
+    - I have a [chest pain](symptom)
+    - I am [sweating](symptom) a lot
+    - I am [shivering](symptom)
+    - [vomiting](symptom)
+    - I'm [itching](symptom)
+    
+
+- lookup: symptom
+  examples: |
+    - loss of balance
+    - unsteadiness
+    - weakness of one body side
+    - loss of smell
+    - bladder discomfort
+    - foul smell ofurine
+    - continuous feel of urine
+    - itching
+    - skin rash
+    - nodal skin eruptions
+    - continuous sneezing
+    - shivering
+    - chills
+    - joint pain
+    - stomach pain
+    - acidity
+    - ulcers on tongue
+    - muscle wasting
+    - vomiting
+    - burning micturition
+    - spotting urination
+    - fatigue
+    - weight gain
+    - anxiety
+    - cold hands and feets
+    - mood swings
+    - weight loss
+    - restlessness
+    - lethargy
+    - patches in throat
+    - irregular sugar level
+    - cough
+    - high fever
+    - sunken eyes
+    - breathlessness
+    - sweating
+    - dehydration
+    - indigestion
+    - headache
+    - yellowish skin
+    - dark urine
+    - nausea
+    - loss of appetite
+    - pain behind the eyes
+    - back pain
+    - constipation
+    - abdominal pain
+    - diarrhoea
+    - mild fever
+    - yellow urine
+    - yellowing of eyes
+    - acute liver failure
+    - fluid overload
+    - swelling of stomach
+    - swelled lymph nodes
+    - malaise
+    - blurred and distorted vision
+    - phlegm
+    - throat irritation
+    - redness of eyes
+    - sinus pressure
+    - runny nose
+    - congestion
+    - chest pain
+    - weakness in limbs
+    - fast heart rate
+    - pain during bowel movements
+    - pain in anal region
+    - bloody stool
+    - irritation in anus
+    - neck pain
+    - dizziness
+    - cramps
+    - bruising
+    - obesity
+    - swollen legs
+    - swollen blood vessels
+    - puffy face and eyes
+    - enlarged thyroid
+    - brittle nails
+    - swollen extremeties
+    - excessive hunger
+    - extra marital contacts
+    - drying and tingling lips
+    - slurred speech
+    - knee pain
+    - hip joint pain
+    - muscle weakness
+    - stiff neck
+    - swelling joints
+    - movement stiffness
+    - spinning movements
+    - passage of gases
+    - internal itching
+    - toxic look (typhos)
+    - depression
+    - irritability
+    - muscle pain
+    - altered sensorium
+    - red spots over body
+    - belly pain
+    - abnormal menstruation
+    - dischromic patches
+    - watering from eyes
+    - increased appetite
+    - polyuria
+    - family history
+    - mucoid sputum
+    - rusty sputum
+    - lack of concentration
+    - visual disturbances
+    - receiving blood transfusion
+    - receiving unsterile injections
+    - coma
+    - stomach bleeding
+    - distention of abdomen
+    - history of alcohol consumption
+    - fluid overload
+    - blood in sputum
+    - prominent veins on calf
+    - palpitations
+    - painful walking
+    - pus filled pimples
+    - blackheads
+    - scurring
+    - skin peeling
+    - silver like dusting
+    - small dents in nails
+    - inflammatory nails
+    - blister
+    - red sore around nose
+    - yellow crust ooze
+    - prognosis
