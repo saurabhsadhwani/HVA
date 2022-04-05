@@ -1,16 +1,6 @@
 https://chat-widget-docs.rasa.com/?path=/docs/rasa-chat-widget--widget
 
 
-Sample Expected Conversation Flow :
-
-Hi
-	Hey! How can I help you?
-I am feeling sick
-	Please enter the symptom you have
-I am itching
-
-
-
 नमस्ते
 नमस्कार
 
@@ -24,9 +14,13 @@ I am itching
 	कृपया अपने लक्षण दर्ज करें
 	हमें अपने लक्षण बताएं
 
+मुझे खांसी है
 मुझे खुजली हो रही है
-खुजली
-खांसी
+मुझे उल्टी हो रही है
+मुझे बहुत पसीना आ रहा है
+मुझे अतिसार हो गया है
+मुझे छींक और खांसी आ रही है
+मुझे छींक और उल्टी आ रही है
 
 
 बस इतना ही
@@ -41,10 +35,55 @@ Tasks to do next :
 
 - output pure hindi
 - lemmatization
-- synonames for symptoms
+- synonymes for symptoms
 - intent for multiple symptoms
 - update action for above part
 - interactive learning for various paths
 
 - try for language choice button
 - if above not possible, add functionality to ask language at start of Conversation
+
+
+
+usable symptoms:
+
+cold : सर्दी
+itching : खुजली
+cough : खांसी
+vomitting : उल्टी, उलटी करना
+acidity : अम्लता, पेट में गैस
+shiver : कांपना, कंपकंपी
+stomach ache : पेटदर्द, पेट में दर्द
+sneeze : छींक, छींक आना, छींकना
+coma : कोमा, प्रगाढ़ बेहोशी
+palpitation : घबराहट
+dizziness : चक्कर आना, चक्कर
+patch in throat : पीड़ादायक पैच
+fatigue : थकान
+weight loss : वजन घटना
+headache : सरदर्द
+chest pain : सीने में दर्द, छाती में दर्द
+back pain : पीठ दर्द
+limb weakness : अंग की कमजोरी
+joint pain : जोड़ों का दर्द
+pale skin : पीली त्वचा
+constipation : कब्ज
+breathlessness : सांस फूलना
+mood swings : मिजाज़
+neck pain : गर्दन दर्द
+stiff neck : गर्दन में अकड़न
+pimple : फुंसी
+high fever : उच्च बुखार
+dehydration : निर्जलीकरण
+restlessness : बेचैनी
+sweating : पसीना
+nausea : मिचली
+diarrhoea : दस्त, अतिसार
+swollen feet : सूजे हुए पैर
+distention of abdomen : पेट बढ़ाना
+internal itching : आंतरिक खुजली
+unsteadiness : अस्थिरता
+depression : डिप्रेशन
+malaise : अस्वस्थता
+phlegm : कफ
+fast heart rate : तेज हृदय गति

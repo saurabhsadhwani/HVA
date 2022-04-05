@@ -34,37 +34,37 @@ actions:
 
 responses:
   utter_greet:
-  - text: "Hey! How can I help you?"
+  - text: "नमस्ते! मैं आपकी क्या मदद कर सकता हूँ?"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
+  - text: "यहाँ आपको खुश करने के लिए कुछ है:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "क्या इससे आपको मदद मिली?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "बढ़िया, जारी रखो!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "अलविदा"
 
   utter_iamabot:
-  - text: "I am a medical bot, developed in Rasa."
+  - text: "मैं एक मेडिकल बॉट हूं, जिसे रासा में विकसित किया गया है।"
 
   utter_ask_symptom:
-  - text: "Please enter the symptom you have"
+  - text: "कृपया अपने लक्षण दर्ज करें"
 
   utter_alternative:
-  - text: Can you tell us what other symptom you have?
+  - text: "क्या आप हमें बता सकते हैं कि आपको और क्या लक्षण हैं?"
 
   utter_ask:
-  - text: Do you have this symptom?
+  - text: "क्या आपको यह लक्षण है?"
     buttons:
-    - title: yes
+    - title: "हां"
       payload: /symptom
-    - title: no
-      payload: /all
+    - title: "नहीं"
+      payload: /deny
 
 session_config:
   session_expiration_time: 60
