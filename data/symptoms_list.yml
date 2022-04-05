@@ -1,0 +1,626 @@
+version: "3.0"
+
+nlu:
+- lookup: symptom
+  examples: |
+    -  itch
+    -  skin rash
+    -  continuous sneeze
+    -  shiver
+    -  stomach pain
+    -  acidity
+    -  vomit
+    -  indigestion
+    -  muscle waste
+    -  patch in throat
+    -  fatigue
+    -  weight loss
+    -  sunken eye
+    -  cough
+    -  headache
+    -  chest pain
+    -  back pain
+    -  weakness in limb
+    -  chill
+    -  joint pain
+    -  yellowish skin
+    -  constipation
+    -  pain during bowel movement
+    -  breathlessness
+    -  cramp
+    -  weight gain
+    -  mood swing
+    -  neck pain
+    -  muscle weakness
+    -  stiff neck
+    -  pu fill pimple
+    -  burn micturition
+    -  bladder discomfort
+    -  high fever
+    -  nodal skin eruption
+    -  ulcer on tongue
+    -  loss of appetite
+    -  restlessness
+    -  dehydration
+    -  dizziness
+    -  weakness of one body side
+    -  lethargy
+    -  nausea
+    -  abdominal pain
+    -  pain in anal region
+    -  sweat
+    -  bruising
+    -  cold hand and feets
+    -  anxiety
+    -  knee pain
+    -  swell joint
+    -  blackhead
+    -  foul smell of urine
+    -  skin peeling
+    -  blister
+    -  dischromic patch
+    -  water from eye
+    -  extra marital contact
+    -  diarrhoea
+    -  loss of balance
+    -  blur and distort vision
+    -  altered sensorium
+    -  dark urine
+    -  swell of stomach
+    -  bloody stool
+    -  obesity
+    -  hip joint pain
+    -  movement stiffness
+    -  spin movement
+    -  scurring
+    -  continuous feel of urine
+    -  silver like dust
+    -  red sore around nose
+    -  spot urination
+    -  passage of gas
+    -  irregular sugar level
+    -  family history
+    -  lack of concentration
+    -  excessive hunger
+    -  yellowing of eye
+    -  distention of abdomen
+    -  irritation in anus
+    -  swell leg
+    -  painful walking
+    -  small dent in nail
+    -  yellow crust ooze
+    -  internal itching
+    -  mucoid sputum
+    -  history of alcohol consumption
+    -  swell blood vessel
+    -  unsteadiness
+    -  inflammatory nail
+    -  depression
+    -  fluid overload
+    -  swell lymph node
+    -  malaise
+    -  prominent vein on calf
+    -  puffy face and eye
+    -  fast heart rate
+    -  irritability
+    -  muscle pain
+    -  mild fever
+    -  yellow urine
+    -  phlegm
+    -  enlarge thyroid
+    -  increase appetite
+    -  visual disturbance
+    -  brittle nail
+    -  drying and tingle lip
+    -  polyuria
+    -  pain behind the eye
+    -  toxic look ( typhos )
+    -  throat irritation
+    -  swollen extremeties
+    -  slur speech
+    -  red spot over body
+    -  belly pain
+    -  receive blood transfusion
+    -  acute liver failure
+    -  redness of eye
+    -  rusty sputum
+    -  abnormal menstruation
+    -  receive unsterile injection
+    -  coma
+    -  sinus pressure
+    -  palpitation
+    -  stomach bleeding
+    -  runny nose
+    -  congestion
+    -  blood in sputum
+    -  loss of smell
+    -  itching
+    -  itchiness
+    -  rub
+    -  scabies
+    -  scratch
+    -  rash
+    -  roseola
+    -  efflorescence
+    -  sneezing
+    -  sneeze
+    -  sternutation
+    -  tremble
+    -  tingle
+    -  quiver
+    -  shudder
+    -  shake
+    -  throb
+    -  shivering
+    -  trembling
+    -  stomach ache
+    -  abdominal pain
+    -  gripe
+    -  belly-ache
+    -  sourness
+    -  sour
+    -  acidulousness
+    -  barf
+    -  vomiting
+    -  throw up
+    -  puking
+    -  puke
+    -  upset stomach
+    -  dyspepsia
+    -  stomach upset
+    -  atrophy
+    -  sore patch
+    -  tiredness
+    -  tired
+    -  tire out
+    -  slimming
+    -  slim
+    -  lose weight
+    -  slender
+    -  slenderize
+    -  thinnig
+    -  sunken eyes
+    -  coughing
+    -  worry
+    -  vexation
+    -  cephalalgia
+    -  pain in chest
+    -  pain in back
+    -  limb weakness
+    -  cool
+    -  cold
+    -  arthralgia
+    -  arthragra
+    -  pale skin
+    -  costiveness
+    -  shortness of breath
+    -  muscle spasm
+    -  twitch
+    -  gain weight
+    -  gained weight
+    -  mood swings
+    -  fluctuating mood
+    -  emotional instability
+    -  pain in neck
+    -  weakness in muscles
+    -  stiffness in neck
+    -  pus filled pimples
+    -  pimple
+    -  discomfort
+    -  vertigo
+    -  evaporation
+    -  dizzy
+    -  drowsiness
+    -  disintrest
+    -  sickness
+    -  sweating
+    -  perspire
+    -  perspiration
+    -  diarrhea
+    -  looseness
+    -  abdominal distention
+    -  burning in the anus
+    -  swollen feet
+    -  itching inside
+    -  itching internally
+    -  unsteady
+    -  instability
+    -  slump
+    -  ill feeling
+    -  sluggishness
+    -  typhos
+    -  comatoseness
+    -  vibration
+    -  nervousness
+    -  itching
+    -  itchiness
+    -  rub
+    -  scabies
+    -  scratch
+    -  rash
+    -  roseola
+    -  efflorescence
+    -  sneezing
+    -  sneeze
+    -  sternutation
+    -  tremble
+    -  tingle
+    -  quiver
+    -  shudder
+    -  shake
+    -  throb
+    -  shivering
+    -  trembling
+    -  stomach ache
+    -  abdominal pain
+    -  gripe
+    -  belly-ache
+    -  sourness
+    -  sour
+    -  acidulousness
+    -  barf
+    -  vomiting
+    -  throw up
+    -  puking
+    -  puke
+    -  upset stomach
+    -  dyspepsia
+    -  stomach upset
+    -  atrophy
+    -  sore patch
+    -  tiredness
+    -  tired
+    -  tire out
+    -  slimming
+    -  slim
+    -  lose weight
+    -  slender
+    -  slenderize
+    -  thinnig
+    -  sunken eyes
+    -  coughing
+    -  worry
+    -  vexation
+    -  cephalalgia
+    -  pain in chest
+    -  pain in back
+    -  limb weakness
+    -  cool
+    -  cold
+    -  arthralgia
+    -  arthragra
+    -  pale skin
+    -  costiveness
+    -  shortness of breath
+    -  muscle spasm
+    -  twitch
+    -  gain weight
+    -  gained weight
+    -  mood swings
+    -  fluctuating mood
+    -  emotional instability
+    -  pain in neck
+    -  weakness in muscles
+    -  stiffness in neck
+    -  pus filled pimples
+    -  pimple
+    -  discomfort
+    -  vertigo
+    -  evaporation
+    -  dizzy
+    -  drowsiness
+    -  disintrest
+    -  sickness
+    -  sweating
+    -  perspire
+    -  perspiration
+    -  diarrhea
+    -  looseness
+    -  abdominal distention
+    -  burning in the anus
+    -  swollen feet
+    -  itching inside
+    -  itching internally
+    -  unsteady
+    -  instability
+    -  slump
+    -  ill feeling
+    -  sluggishness
+    -  typhos
+    -  comatoseness
+    -  vibration
+    -  nervousness
+    -  itching
+    -  itchiness
+    -  rub
+    -  scabies
+    -  scratch
+    -  rash
+    -  roseola
+    -  efflorescence
+    -  sneezing
+    -  sneeze
+    -  sternutation
+    -  tremble
+    -  tingle
+    -  quiver
+    -  shudder
+    -  shake
+    -  throb
+    -  shivering
+    -  trembling
+    -  stomach ache
+    -  abdominal pain
+    -  gripe
+    -  belly-ache
+    -  sourness
+    -  sour
+    -  acidulousness
+    -  barf
+    -  vomiting
+    -  throw up
+    -  puking
+    -  puke
+    -  upset stomach
+    -  dyspepsia
+    -  stomach upset
+    -  atrophy
+    -  sore patch
+    -  tiredness
+    -  tired
+    -  tire out
+    -  slimming
+    -  slim
+    -  lose weight
+    -  slender
+    -  slenderize
+    -  thinnig
+    -  sunken eyes
+    -  coughing
+    -  worry
+    -  vexation
+    -  cephalalgia
+    -  pain in chest
+    -  pain in back
+    -  limb weakness
+    -  cool
+    -  cold
+    -  arthralgia
+    -  arthragra
+    -  pale skin
+    -  costiveness
+    -  shortness of breath
+    -  muscle spasm
+    -  twitch
+    -  gain weight
+    -  gained weight
+    -  mood swings
+    -  fluctuating mood
+    -  emotional instability
+    -  pain in neck
+    -  weakness in muscles
+    -  stiffness in neck
+    -  pus filled pimples
+    -  pimple
+    -  discomfort
+    -  vertigo
+    -  evaporation
+    -  dizzy
+    -  drowsiness
+    -  disintrest
+    -  sickness
+    -  sweating
+    -  perspire
+    -  perspiration
+    -  diarrhea
+    -  looseness
+    -  abdominal distention
+    -  burning in the anus
+    -  swollen feet
+    -  itching inside
+    -  itching internally
+    -  unsteady
+    -  instability
+    -  slump
+    -  ill feeling
+    -  sluggishness
+    -  typhos
+    -  comatoseness
+    -  vibration
+    -  nervousness
+    -  itching
+    -  itchiness
+    -  rub
+    -  scabies
+    -  scratch
+    -  rash
+    -  roseola
+    -  efflorescence
+    -  sneezing
+    -  sneeze
+    -  sternutation
+    -  tremble
+    -  tingle
+    -  quiver
+    -  shudder
+    -  shake
+    -  throb
+    -  shivering
+    -  trembling
+    -  stomach ache
+    -  abdominal pain
+    -  gripe
+    -  belly-ache
+    -  sourness
+    -  sour
+    -  acidulousness
+    -  barf
+    -  vomiting
+    -  throw up
+    -  puking
+    -  puke
+    -  upset stomach
+    -  dyspepsia
+    -  stomach upset
+    -  atrophy
+    -  sore patch
+    -  tiredness
+    -  tired
+    -  tire out
+    -  slimming
+    -  slim
+    -  lose weight
+    -  slender
+    -  slenderize
+    -  thinnig
+    -  sunken eyes
+    -  coughing
+    -  worry
+    -  vexation
+    -  cephalalgia
+    -  pain in chest
+    -  pain in back
+    -  limb weakness
+    -  cool
+    -  cold
+    -  arthralgia
+    -  arthragra
+    -  pale skin
+    -  costiveness
+    -  shortness of breath
+    -  muscle spasm
+    -  twitch
+    -  gain weight
+    -  gained weight
+    -  mood swings
+    -  fluctuating mood
+    -  emotional instability
+    -  pain in neck
+    -  weakness in muscles
+    -  stiffness in neck
+    -  pus filled pimples
+    -  pimple
+    -  discomfort
+    -  vertigo
+    -  evaporation
+    -  dizzy
+    -  drowsiness
+    -  disintrest
+    -  sickness
+    -  sweating
+    -  perspire
+    -  perspiration
+    -  diarrhea
+    -  looseness
+    -  abdominal distention
+    -  burning in the anus
+    -  swollen feet
+    -  itching inside
+    -  itching internally
+    -  unsteady
+    -  instability
+    -  slump
+    -  ill feeling
+    -  sluggishness
+    -  typhos
+    -  comatoseness
+    -  vibration
+    -  nervousness
+    -  itching
+    -  itchiness
+    -  rub
+    -  scabies
+    -  scratch
+    -  rash
+    -  roseola
+    -  efflorescence
+    -  sneezing
+    -  sneeze
+    -  sternutation
+    -  tremble
+    -  tingle
+    -  quiver
+    -  shudder
+    -  shake
+    -  throb
+    -  shivering
+    -  trembling
+    -  stomach ache
+    -  abdominal pain
+    -  gripe
+    -  belly-ache
+    -  sourness
+    -  sour
+    -  acidulousness
+    -  barf
+    -  vomiting
+    -  throw up
+    -  puking
+    -  puke
+    -  upset stomach
+    -  dyspepsia
+    -  stomach upset
+    -  atrophy
+    -  sore patch
+    -  tiredness
+    -  tired
+    -  tire out
+    -  slimming
+    -  slim
+    -  lose weight
+    -  slender
+    -  slenderize
+    -  thinnig
+    -  sunken eyes
+    -  coughing
+    -  worry
+    -  vexation
+    -  cephalalgia
+    -  pain in chest
+    -  pain in back
+    -  limb weakness
+    -  cool
+    -  cold
+    -  arthralgia
+    -  arthragra
+    -  pale skin
+    -  costiveness
+    -  shortness of breath
+    -  muscle spasm
+    -  twitch
+    -  gain weight
+    -  gained weight
+    -  mood swings
+    -  fluctuating mood
+    -  emotional instability
+    -  pain in neck
+    -  weakness in muscles
+    -  stiffness in neck
+    -  pus filled pimples
+    -  pimple
+    -  discomfort
+    -  vertigo
+    -  evaporation
+    -  dizzy
+    -  drowsiness
+    -  disintrest
+    -  sickness
+    -  sweating
+    -  perspire
+    -  perspiration
+    -  diarrhea
+    -  looseness
+    -  abdominal distention
+    -  burning in the anus
+    -  swollen feet
+    -  itching inside
+    -  itching internally
+    -  unsteady
+    -  instability
+    -  slump
+    -  ill feeling
+    -  sluggishness
+    -  typhos
+    -  comatoseness
+    -  vibration
+    -  nervousness

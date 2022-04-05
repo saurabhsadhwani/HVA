@@ -21,3 +21,8 @@ rules:
   steps:
   - intent: end
   - action: action_diagnosis
+
+- rule: Start utter_aternate anytime intent 'deny' is detected
+  steps:
+  - intent: deny
+  - action: utter_alternative
