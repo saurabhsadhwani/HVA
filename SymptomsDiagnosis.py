@@ -17,7 +17,7 @@ class SymptomsDiagnosis:
         self.dataset = pd.read_excel(join(BASE_DIR, "dataset.xlsx"))
 
         # Unpickle the trained Decision Tree model 
-        with open('decisionTree.pkl', 'rb') as f:
+        with open('randomForest.pkl', 'rb') as f:
             self.mlmodel = pickle.load(f)
 
         # Unpickle the diseases dictionary
@@ -25,7 +25,7 @@ class SymptomsDiagnosis:
             self.diseases = pickle.load(f)
 
         # Unpickle the dimensions list
-        with open('dimensions.pkl', 'rb') as f:
+        with open('dimensionsRandomForest.pkl', 'rb') as f:
             self.dimensions = pickle.load(f)
 
         # Spacy instance for stemming hindi words

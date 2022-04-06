@@ -14,6 +14,10 @@ from rasa_sdk.events import SlotSet
 from SymptomsDiagnosis import SymptomsDiagnosis
 import pickle 
 from numpy import array
+from time import sleep
+from spacy.lang.hi import Hindi
+
+hindi = Hindi()
 
 # class ActionHelloWorld(Action):
 #
@@ -52,13 +56,13 @@ class ActionSymptomsTracker(Action):
             symptoms = []
 
         if latest_entity:
-            symptoms.append(latest_entity[0]['value'])
+            symptoms.append(str(hindi(latest_entity[0]['value'])))
             entity_traced = True
         
         # add current sypmtom to symptoms list or state already noted
         if latest_message not in symptoms and not entity_traced:
             if latest_message != "":
-                symptoms.append(latest_message)   
+                symptoms.append(str(hindi(latest_message)))
         elif entity_traced and latest_message in symptoms:
             dispatcher.utter_message("आपने पहले से ही इस " + symptoms[-1] + " लक्षण ों का उल्लेख किया है")         
 
@@ -88,11 +92,9 @@ class ActionSymptomsTracker(Action):
         # Create response buttons
         buttons = [{"title": "जी हाँ " + str(already_suggested[0]) +" भी है", "payload": str(already_suggested[0])},{"title":"जी नहीं", "payload": ""}]
 
-        # Send message
-        dispatcher.utter_message("आपने कहा था कि आपको : " + symptoms[-1] + " है |")
+        # Send response to ui
+        # dispatcher.utter_message("आपने कहा था कि आपको : " + symptoms[-1] + " है |")
         dispatcher.utter_button_message("क्या आपको "+ str(already_suggested[0]) + " के लक्षण भी है?", buttons)
-        
-
 
         return [SlotSet("symptom_list", symptoms)]
         
@@ -115,4 +117,9 @@ class ActionDiagnosis(Action):
         # Send message
         dispatcher.utter_message("हमारे मॉडल ने " + diag + " रोग की भविष्यवाणी की है |" )
 
-        return []
+        SlotSet("symptom_list", [])
+
+        # debugging 
+        print("Slot updated", tracker.get_slot("symptom_list"))
+
+        return [SlotSet("symptom_list", [])]

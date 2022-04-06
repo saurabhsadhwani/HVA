@@ -11,7 +11,6 @@ rules:
 - rule: say goodbye to user
   steps:
   - intent: goodbye
-  - action: action_diagnosis
   - action: utter_goodbye
 
 
@@ -31,3 +30,8 @@ rules:
   steps:
   - intent: thanks
   - action: utter_thanks
+
+- rule: predict disease based on given symptoms
+  steps:
+  - intent: predict
+  - action: action_diagnosis

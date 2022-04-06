@@ -25,7 +25,6 @@ stories:
 - story: goodbye path
   steps:
   - intent: goodbye
-  - action: action_diagnosis
   - action: utter_goodbye
 
 
@@ -45,3 +44,9 @@ stories:
   steps:
   - intent: symptoms_sentence
   - action: action_symptoms_tracker 
+
+
+- story: predictions path
+  steps:
+  - intent: predict
+  - action: action_diagnosis
