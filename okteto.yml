@@ -1,7 +1,5 @@
 name: rasa-frontend
 command: bash
-volumes:
-- /root/.cache/pip
 forward:
 - 8000:8000
 reverse:
