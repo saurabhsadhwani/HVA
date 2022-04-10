@@ -54,8 +54,8 @@ export default {
       });
 
       this.botTyping = true;
-
-      axios.post('http://localhost:5005/webhooks/rest/webhook', { 'message': value.text }).then((res) => {
+      // original url : http://localhost:5005/webhooks/rest/webhook
+      axios.post('https://rasa-server-3dbubble.cloud.okteto.net/webhooks/rest/webhook', { 'message': value.text }).then((res) => {
         var response = res['data'];
         console.log(response);
 
