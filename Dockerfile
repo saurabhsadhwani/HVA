@@ -1,4 +1,4 @@
-FROM node:16.14.2 AS BASE
+FROM node:16.14.2 as build-stage
 WORKDIR /app
 COPY UI/ /app
 RUN npm install
