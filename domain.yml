@@ -1,0 +1,65 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - disease
+  - symptoms
+  - thanks
+  - end
+  - symptoms_sentence
+  - predict
+
+actions:
+- utter_greet
+- utter_goodbye
+- utter_thanks
+- utter_affirm
+- utter_deny
+- action_diagnosis
+- action_symptoms_tracker
+- utter_alternative
+- utter_happy
+
+slots:
+   symptom_list:
+      type: list
+      mappings:
+      -  type: from_entity
+         entity: symptoms
+
+responses:
+   utter_greet:
+   - text: |
+      नमस्ते दोस्त! मैं रिलायंस बॉट हूँ | मैं तुम्हारी मदद कैसे कर सकता हूं?
+   - text: |
+      नमस्ते दोस्त! मैं रिलायंस बॉट हूँ | आपकी सेवा में 24x7! मेरे द्वारा आपके लिए क्या किया जा सकता है?
+   utter_goodbye:
+   - text: |
+      अलविदा दोस्त! आप से बात करके अछा लगा।
+   - text: |
+      फिर मिलेंगे दोस्त! आप से बात करके अछा लगा।
+   utter_thanks:
+   - text: |
+      मुझे यह सुन कर खुशी हुई दोस्त!
+   - text: |
+      धन्यवाद दोस्त! आपकी मदद करके खुश हूं |
+   - text: |
+      मदद करने में खुशी हुई दोस्त &#128540;
+   utter_affirm:
+   - text: |
+      धन्यवाद! आपकी मदद करके खुशी हुई दोस्त|
+   utter_deny:
+   - text: |
+      मुझे दुख है कि मैं आपकी मदद नहीं कर सका | कृपया पुन: प्रयास करें दोस्त|
+   utter_alternative:
+   - text: |
+      क्या आप हमें बता सकते हैं कि आपको और क्या क्या लक्षण हैं ?
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
