@@ -8,5 +8,5 @@ RUN npm run build
 
 # production stage
 FROM nginx:stable-alpine as production-stage
-COPY --from=build-stage /app/../static/src/vue/dist /usr/share/nginx/html
+COPY --from=build-stage /static/src/vue/dist/ /usr/share/nginx/html/
 EXPOSE 80
