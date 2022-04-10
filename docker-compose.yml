@@ -1,8 +1,8 @@
 version: '3.0'
 services:
 
-  rasa-server:
-    image: rasa-frontend:latest
+  rasa-frontend:
+    image: rasa-bot:latest
     working_dir: /app
     build: "./"
     restart: always
