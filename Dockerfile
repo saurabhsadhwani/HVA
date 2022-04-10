@@ -4,8 +4,8 @@ WORKDIR /app/UI
 COPY UI/package*.json ./
 RUN npm install
 COPY UI/ .
-RUN npm run build
+# RUN npm run build
 
-# production stage
-FROM nginx:stable-alpine as production-stage
-COPY --from=build-stage /app/static/src/vue/dist /usr/share/nginx/html
+# # production stage
+# FROM nginx:stable-alpine as production-stage
+# COPY --from=build-stage /app/static/src/vue/dist /usr/share/nginx/html
