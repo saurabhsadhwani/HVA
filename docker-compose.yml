@@ -5,9 +5,9 @@ services:
     working_dir: /app
     build: "./"
     restart: always
-    command: [ "npm", "run", "serve"]
+    command: [ "nginx", "-g", "daemon off;"]
     ports:
-    - '8000:8080'
+    - '8000:80'
     public: true
     networks:
     - all
