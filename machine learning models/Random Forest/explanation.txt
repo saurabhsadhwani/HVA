@@ -1,0 +1,10 @@
+Explanation for Confusion matrix:
+
+All the diseases or labels are numerical and these numbers represent disease.
+To find which disease does a number represent unpickle the file disease.pkl.
+Accuracy of 100% was achieved by random forest model while previous decision tree was on the mark of ~94%.
+
+
+Why we represented numbers instead of labels?
+Answer to this question is pretty simple, We are having diseases in Indic 
+Language i.e Hindi which is not supported by matplotlib as well as seaborn.

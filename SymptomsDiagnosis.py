@@ -4,6 +4,7 @@ from os.path import abspath, dirname, join
 from sklearn.neighbors import KNeighborsClassifier
 import pickle
 from numpy import where, array
+from random import randint, choice, sample
 
 response_variable = 'बीमारी'
 
@@ -27,6 +28,11 @@ class SymptomsDiagnosis:
         # Unpickle the dimensions list
         with open('dimensionsRandomForest.pkl', 'rb') as f:
             self.dimensions = pickle.load(f)
+
+        # Unpickle the apriori dataframe
+        with open('apriori.pkl', 'rb') as f:
+            self.apriori = pickle.load(f)
+        
 
         # Spacy instance for stemming hindi words
         self.stemmer = Hindi()
@@ -61,17 +67,23 @@ class SymptomsDiagnosis:
     def __suggest_symptoms(self, user_symptoms, suggested_so_far):
         """
         Private method for symptoms suggester
+        Uses Apriori Algorithm
         """
-        # method 1: but not working 
-        # next_symptom = list(set(self.stemmed_symptoms) - set(user_symptoms))
+        print(user_symptoms)
+        suggest_symptoms = self.apriori[self.apriori['antecedents'] == frozenset(user_symptoms)]
+        # print(suggest_symptoms.head())
+        suggest_symptoms = suggest_symptoms.sort_values(['confidence', 'lift'], ascending =[False, False])
+        print(suggest_symptoms.head())
         
-        next_symptom = []
-        for symp in self.stemmed_symptoms:
-            symp = str(symp)
-            if symp not in user_symptoms and symp not in suggested_so_far:
-                next_symptom.append(symp)
-        
-        return next_symptom
+        if not suggest_symptoms.empty:
+            # print(list(suggest_symptoms.index.values))
+            for row in suggest_symptoms.iterrows():
+                symptom = list(suggest_symptoms['consequents'])
+                for symp in symptom:
+                    if symp not in user_symptoms:
+                        # print(list(symp)[0])
+                        return list(symp)[0]
+        return None
 
 
     def symptoms_suggester(self, symptoms_from_user, suggested_so_far):
@@ -119,4 +131,4 @@ class SymptomsDiagnosis:
 
 if __name__ == "__main__":
     obj = SymptomsDiagnosis()
-    obj.printer()
+    obj.symptoms_suggester(['श्वासहीनता'], [])

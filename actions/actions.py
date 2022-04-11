@@ -15,9 +15,6 @@ from SymptomsDiagnosis import SymptomsDiagnosis
 import pickle 
 from numpy import array
 from time import sleep
-from spacy.lang.hi import Hindi
-
-hindi = Hindi()
 
 # class ActionHelloWorld(Action):
 #
@@ -43,10 +40,11 @@ class ActionSymptomsTracker(Action):
         
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        # get the latest message from user
-        latest_message = tracker.latest_message.get('text')
+        # get the latest entity
         latest_entity = tracker.latest_message['entities']
         entity_traced = False
+
+        print(latest_entity)
 
         # get users symptoms
         symptoms = tracker.get_slot("symptom_list")
@@ -55,16 +53,23 @@ class ActionSymptomsTracker(Action):
         if symptoms is None:
             symptoms = []
 
-        if latest_entity:
-            symptoms.append(str(hindi(latest_entity[0]['value'])))
-            entity_traced = True
-        
         # add current sypmtom to symptoms list or state already noted
-        if latest_message not in symptoms and not entity_traced:
-            if latest_message != "":
-                symptoms.append(str(hindi(latest_message)))
-        elif entity_traced and latest_message in symptoms:
-            dispatcher.utter_message("आपने पहले से ही इस " + symptoms[-1] + " लक्षण ों का उल्लेख किया है")         
+        if (not entity_traced) and latest_entity:
+            combined_entity = ""
+            for i in range (len(latest_entity)):
+                combined_entity += latest_entity[i]['value'] + " "
+            
+            combined_entity = combined_entity.strip()
+            print(combined_entity)
+            if combined_entity in symptoms:
+                dispatcher.utter_message("आपने पहले से ही इस " + combined_entity + " लक्षण ों का उल्लेख किया है")
+            else:
+                symptoms.append(combined_entity)
+                entity_traced = True
+
+        # if latest_entity:
+        #     symptoms.append(latest_entity[0]['value'])
+        #     entity_traced = True
 
         # update slot for future use
         SlotSet("symptom_list", symptoms)
@@ -74,27 +79,28 @@ class ActionSymptomsTracker(Action):
 
         # list for suggested symptoms
         already_suggested = []
-
-        # check wether symptoms are already suggested or not
-        for symp in suggested_symptoms:
-            if symp not in symptoms and symp not in symptoms_suggested_so_far:
-                already_suggested.append(symp)
                 
-        # if no suggestion are made so far 
-        if len(already_suggested) == 0:
-            dispatcher.utter_template('utter_alternative')
+        # if no suggestion are made so far
+        if suggested_symptoms is None:
+            dispatcher.utter_template('utter_alternative', tracker)
             return [SlotSet("symptom_list", symptoms)]
+
+        # append suggested symptom to already_suggested
+        if suggested_symptoms in symptoms_suggested_so_far:
+            already_suggested.append(suggested_symptoms)
 
         # Reason : we want to update user for highest confidence symptoms already_suggested
 
-        symptoms_suggested_so_far.append(str(already_suggested[0]))
+        symptoms_suggested_so_far.append(suggested_symptoms)
 
         # Create response buttons
-        buttons = [{"title": "जी हाँ " + str(already_suggested[0]) +" भी है", "payload": str(already_suggested[0])},{"title":"जी नहीं", "payload": ""}]
+        buttons = [{"title": "जी हाँ " + suggested_symptoms +" भी है", "payload": suggested_symptoms},{"title":"जी नहीं", "payload": ""}]
 
         # Send response to ui
         # dispatcher.utter_message("आपने कहा था कि आपको : " + symptoms[-1] + " है |")
-        dispatcher.utter_button_message("क्या आपको "+ str(already_suggested[0]) + " के लक्षण भी है?", buttons)
+        dispatcher.utter_button_message("क्या आपको "+ suggested_symptoms + " के लक्षण भी है?", buttons)
+
+        print("symptoms", symptoms)
 
         return [SlotSet("symptom_list", symptoms)]
         
@@ -120,6 +126,6 @@ class ActionDiagnosis(Action):
         SlotSet("symptom_list", [])
 
         # debugging 
-        print("Slot updated", tracker.get_slot("symptom_list"))
+        # print("Slot updated", tracker.get_slot("symptom_list"))
 
         return [SlotSet("symptom_list", [])]
