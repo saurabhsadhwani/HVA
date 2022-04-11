@@ -22,9 +22,10 @@ ADD config.yml config.yml
 ADD domain.yml domain.yml
 ADD credentials.yml credentials.yml
 ADD endpoints.yml endpoints.yml
+ADD SymptomsDiagnosis.py SymptomsDiagnosis.py
+ADD apriori.pkl apriori.pkl
 ADD dataset.xlsx dataset.xlsx
 ADD dimensionsRandomForest.pkl dimensionsRandomForest.pkl
 ADD disease.pkl disease.pkl
-ADD printer.py printer.py
 ADD randomForest.pkl randomForest.pkl
-ADD SymptomsDiagnosis.py SymptomsDiagnosis.py
+ADD custom_components/lemmatizer.py custom_components/lemmatizer.py
