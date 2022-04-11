@@ -4,5 +4,6 @@ volumes:
 - /root/.cache/pip
 forward:
 - 8000:8000
+- 5006:5006
 reverse:
 - 8080:8080
