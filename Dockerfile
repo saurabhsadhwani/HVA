@@ -29,3 +29,4 @@ ADD dimensionsRandomForest.pkl dimensionsRandomForest.pkl
 ADD disease.pkl disease.pkl
 ADD randomForest.pkl randomForest.pkl
 ADD custom_components/lemmatizer.py custom_components/lemmatizer.py
+COPY models models
