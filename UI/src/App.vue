@@ -13,7 +13,7 @@
 
 <script>
 import axios from "axios";
-import { VueBotUI } from "vue-bot-ui-audio-p";
+import { VueBotUI } from "vue-bot-ui-audio";
 import HomeTemplate from "@/components/HomeTemplate.vue";
 
 export default {
@@ -31,10 +31,10 @@ export default {
       botTyping: false,
       botOptions: {
         botTitle: "Hindi Voice Assistant",
-        botAvatarImg: "https://i.ibb.co/F0fmSK6/favicon.png",
-        msgBubbleBgUser: "#8A2B21",
-        boardContentBg: "#151515",
-        colorScheme: "#8A2B21",
+        botAvatarImg: "https://i.ibb.co/whNFqVh/Sanjivani-logo.jpg",
+        msgBubbleBgUser: "#382966",
+        boardContentBg: "#D5B9AE",
+        colorScheme: "#00140D",
       },
     };
   },
@@ -54,8 +54,8 @@ export default {
       });
 
       this.botTyping = true;
-      // original url : http://localhost:5005/webhooks/rest/webhook
-      axios.post('https://rasa-server-3dbubble.cloud.okteto.net/webhooks/rest/webhook', { 'message': value.text }).then((res) => {
+      // http://localhost:5005/webhooks/rest/webhook
+      axios.post('https://rasa-server-saurabhsadhwani.cloud.okteto.net/webhooks/rest/webhook', { 'message': value.text }).then((res) => {
         var response = res['data'];
         console.log(response);
 

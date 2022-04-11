@@ -14,7 +14,7 @@
     "sass-loader": "^12.6.0",
     "vue": "^2.6.11",
     "vue-bot-ui": "^0.2.4",
-    "vue-bot-ui-audio-p": "^0.2.9",
+    "vue-bot-ui-audio": "^0.2.10",
     "yarn": "^1.22.17"
   },
   "devDependencies": {

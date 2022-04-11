@@ -1,6 +1,6 @@
   body {
-  background-color: #000000;
-  color: white;
+  background-color: #cca59a;
+  color: #1A132F;
   min-height: 100vh;
 }
 
@@ -11,13 +11,17 @@
 .grid .main h1{
     font-size: 4em;
     width: fit-content;
-    color: #c0c0c0;
+    color: #1A132F;
 }
+.main p {
+  font-size: 1.3em;
+}
+
 .grid .main .subtitle{
     margin-top: 0.8em;
-    font-size: 1.2em;
+    font-size: 1.9em;
     width: fit-content;
-    color: rgb(195, 8, 63);
+    color: #1A132F;
     font-weight: bold;
 }
 .underlines{
@@ -39,16 +43,16 @@
 }
 
 .underlines .underline:nth-child(4){
-    background-color: rgb(111, 34, 50);
+    background-color: #1A132F;
 }
 .underlines .underline:nth-child(3){
-    background-color: rgb(149, 7, 65);
+    background-color: #312358;
 }
 .underlines .underline:nth-child(2){
-    background-color: rgb(149, 7, 65);
+    background-color: #5A40A0;
 }
 .underlines .underline:nth-child(1){
-    background-color: rgb(163, 51, 39);
+    background-color: #917CCB;
 }
 
 @media only screen and (min-width: 768px) {
@@ -60,5 +64,5 @@
 }
 
 .qkb-bubble-btn, .qkb-board-header {
-  background-color: rgb(163, 51, 39) !important;
+  background-color: #382966 !important;
 }

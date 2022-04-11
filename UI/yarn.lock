@@ -6090,10 +6090,10 @@
   "resolved" "https://registry.npmjs.org/void-elements/-/void-elements-3.1.0.tgz"
   "version" "3.1.0"
 
-"vue-bot-ui-audio-p@^0.2.9":
-  "integrity" "sha512-5Bbd01vZVi/G87zedmO126CnvxKAfBBNqvA9MKSEsAA2GO5v8nHSE0WTwOydBYnjWR9qdspdOpcJPKm0rsMblA=="
-  "resolved" "https://registry.npmjs.org/vue-bot-ui-audio-p/-/vue-bot-ui-audio-p-0.2.9.tgz"
-  "version" "0.2.9"
+"vue-bot-ui-audio@^0.2.10":
+  "integrity" "sha512-RbAz23ct+qABL7EFB+/VCMTbfxYrj8IDt1+GqeB0zhBbHENdW3NF1B8K/XVC6/siVUsp7oN7MCX5HnWSyvhjVA=="
+  "resolved" "https://registry.npmjs.org/vue-bot-ui-audio/-/vue-bot-ui-audio-0.2.10.tgz"
+  "version" "0.2.10"
   dependencies:
     "css-loader" "^3.6.0"
     "vue-bot-ui" "^0.2.8"
