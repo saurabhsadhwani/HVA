@@ -31,7 +31,7 @@ export default {
       botTyping: false,
       botOptions: {
         botTitle: "Hindi Voice Assistant",
-        botAvatarImg: "https://i.ibb.co/whNFqVh/Sanjivani-logo.jpg",
+        botAvatarImg: "https://i.ibb.co/GsWtJzz/Sanjivani-logo2.png",
         msgBubbleBgUser: "#382966",
         boardContentBg: "#D5B9AE",
         colorScheme: "#00140D",
