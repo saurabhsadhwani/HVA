@@ -16,7 +16,7 @@ RUN pip install --no-cache-dir --upgrade pip
 
 RUN pip install rasa==3.0.7
 RUN pip install pandas spacy openpyxl stanza
-RUN python -c "stanza.download('hi')"
+RUN python -c "import stanza; stanza.download('hi')"
 
 ADD config.yml config.yml
 ADD domain.yml domain.yml
