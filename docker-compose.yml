@@ -28,7 +28,17 @@ services:
     - '5055:5055'
     networks:
     - all
-
+  
+  rasa-frontend:
+    working_dir: /app/UI
+    build: "./rasa_frontend_container/"
+    restart: always
+    command: [ "nginx", "-g", "daemon off;" ]
+    ports:
+    - '8000:80'
+    public: true
+    networks:
+    - all
 networks:
   all:
     driver: bridge

@@ -1,8 +1,8 @@
-name: rasa-server
+name: rasa-frontend
 command: bash
 volumes:
 - /root/.cache/pip
 forward:
-- 5006:5006
+- 8000:8000
 reverse:
 - 8080:8080
