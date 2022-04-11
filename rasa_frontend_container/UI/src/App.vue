@@ -32,6 +32,7 @@ export default {
       botOptions: {
         botTitle: "Hindi Voice Assistant",
         botAvatarImg: "https://i.ibb.co/GsWtJzz/Sanjivani-logo2.png",
+        botAvatarSize: 50,
         msgBubbleBgUser: "#382966",
         boardContentBg: "#D5B9AE",
         colorScheme: "#00140D",
